@@ -28,12 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            btnRun = new Button();
+            txtInput = new TextBox();
+            OutputBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)OutputBox).BeginInit();
+            SuspendLayout();
+            // 
+            // btnRun
+            // 
+            btnRun.Location = new Point(66, 30);
+            btnRun.Name = "btnRun";
+            btnRun.Size = new Size(112, 34);
+            btnRun.TabIndex = 0;
+            btnRun.Text = "button1";
+            btnRun.UseVisualStyleBackColor = true;
+            btnRun.Click += btnRun_Click_1;
+            // 
+            // txtInput
+            // 
+            txtInput.Location = new Point(215, 80);
+            txtInput.Multiline = true;
+            txtInput.Name = "txtInput";
+            txtInput.Size = new Size(308, 194);
+            txtInput.TabIndex = 1;
+            // 
+            // OutputBox
+            // 
+            OutputBox.BackColor = SystemColors.AppWorkspace;
+            OutputBox.Location = new Point(615, 80);
+            OutputBox.Name = "OutputBox";
+            OutputBox.Size = new Size(302, 194);
+            OutputBox.TabIndex = 2;
+            OutputBox.TabStop = false;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1007, 366);
+            Controls.Add(OutputBox);
+            Controls.Add(txtInput);
+            Controls.Add(btnRun);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)OutputBox).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnRun;
+        private TextBox txtInput;
+        private PictureBox OutputBox;
     }
 }
