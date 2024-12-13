@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+
+<h1>BOOSE Program Runner</h1>
+
+<form method="post">
+    <div>
+        <label for="txtInput">Enter Command:</label>
+        <input type="text" id="txtInput" name="InputCommand" class="form-control" />
+    </div>
+    <div style="margin-top: 10px;">
+        <button type="submit" class="btn btn-primary">Run</button>
+    </div>
+</form>
+
+<hr />
+
+<h2>Output</h2>
+<div>
+    <label>Output:</label>
+    <textarea id="txtOutput" rows="4" class="form-control">@Model.Output</textarea>
+</div>
+
+<div style="margin-top: 10px;">
+    <label>Generated Image:</label>
+    <img src="data:image/png;base64,@Model.ImageOutput" alt="BOOSE Output" style="max-width: 100%; border: 1px solid #ccc;" />
+</div>
